@@ -1,0 +1,11 @@
+{
+  "name": "cljs-babylonjs",
+  "packageManager": "yarn@4.0.2",
+  "dependencies": {
+    "@babylonjs/assets": "^5.20.0",
+    "babylonjs": "^6.39.0",
+    "babylonjs-gui": "^6.39.0",
+    "babylonjs-loaders": "^6.39.0",
+    "shadow-cljs": "^2.26.5"
+  }
+}

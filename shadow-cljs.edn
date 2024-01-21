@@ -1,0 +1,17 @@
+{:nrepl {:port 8777}
+
+ :source-paths ["src" "test"]
+
+ :dependencies [[binaryage/devtools "1.0.6"]
+                [applied-science/js-interop "0.3.3"]
+                [cider/cider-nrepl "0.45.0"]]
+
+ :dev-http {8080 "resources/public"}
+
+ :builds {:app {:target :browser
+                :output-dir "resources/public/js/compiled"
+                :asset-path "/js/compiled"
+                :modules {:app {:init-fn main.core/init}}
+                :devtools {}
+                :dev {:compiler-options {:warnings {:redef false}}}
+                }}}
