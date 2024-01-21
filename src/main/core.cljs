@@ -67,7 +67,7 @@
                      scene)
             ground (-> (j/call MeshBuilder :CreateGround
                                "ground" #js {:width 4 :height 4})
-                       (j/assoc-in! [:position :y] -1)
+                       (j/assoc-in! [:position :y] 0)
                        (j/assoc! :material color)
                        (j/assoc! :diffuseTexture texture))
 
@@ -76,7 +76,7 @@
                       (.. Assets -meshes -Yeti -filename)
                       scene
                       (fn [mesh]
-                        (j/assoc-in! mesh [0 :position :y] -1)
+                        (j/assoc-in! mesh [0 :position :y] 0)
                         (j/assoc-in! mesh [0 :scaling] (v3 0.08 0.08 0.08))))
 
             - (j/call SceneLoader :ImportMesh ""
